@@ -46,4 +46,21 @@ query GetMovies {
     genres
   }
 }
+
+query GetMovie {
+  getMovie(movie_id: 29966) {
+  	title
+    year
+    rating
+    genres
+  }
+  suggestMovies(movie_id: 29966) {
+    title
+    year
+    rating
+    genres
+  }
+}
 ```
+
+over-fetching과 under-fetching을 해결할 수 있다.
