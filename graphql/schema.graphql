@@ -13,4 +13,5 @@ type Movie {
 
 type Query {
   getMovies(limit: Int, minimumRating: Float): [Movie]!
+  getMovie(movie_id: Int!): Movie
 }
