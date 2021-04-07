@@ -50,4 +50,15 @@ query GetMovie {
     name
   }
 }
+
+mutation AddMovie {
+  movie(
+    name: "New Movie",
+    score: 3
+  ) {
+    id
+    name
+    score
+  }
+}
 ```

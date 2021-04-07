@@ -24,3 +24,9 @@ const movies = [
 export const getMovies = () => movies;
 
 export const getMovie = (pid) => movies.filter(({ id }) => pid === id)[0];
+
+export const addMovie = (name, score) => {
+  const newMovie = { id: movies[movies.length - 1].id + 1, name, score };
+  movies.push(newMovie);
+  return newMovie;
+};
