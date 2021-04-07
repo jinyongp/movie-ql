@@ -1,6 +1,9 @@
+import { getMovie, getMovies } from "./db";
+
 const resolvers = {
   Query: {
-    name: () => "jinyong",
+    movies: () => getMovies(),
+    movie: (_, { id }) => getMovie(id),
   },
 };
 

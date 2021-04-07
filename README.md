@@ -35,3 +35,19 @@ server.start(() => console.log("GraphQL Server Running on http://localhost:4000"
 `resolvers`: 데이터베이스, 파일, API 등하고 연결되어 query를 받고 사용자가 필요한 정보를 전달한다.
 
 Playground(http://localhost:4000)를 통해 Query를 테스트할 수 있다.
+
+```graphql
+query GetMovies {
+  movies {
+    id
+    name
+    score
+  }
+}
+
+query GetMovie {
+  movie(id: 3) {
+    name
+  }
+}
+```
