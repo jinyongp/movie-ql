@@ -38,27 +38,12 @@ Playground(http://localhost:4000)를 통해 Query를 테스트할 수 있다.
 
 ```graphql
 query GetMovies {
-  movies {
+  getMovies(limit: 3, minimumRating: 9) {
     id
-    name
-    score
-  }
-}
-
-query GetMovie {
-  movie(id: 3) {
-    name
-  }
-}
-
-mutation AddMovie {
-  movie(
-    name: "New Movie",
-    score: 3
-  ) {
-    id
-    name
-    score
+    title
+    year
+    rating
+    genres
   }
 }
 ```
