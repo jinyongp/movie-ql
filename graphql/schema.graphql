@@ -5,10 +5,10 @@ type Movie {
 }
 
 type Query {
-  movies: [Movie]!
-  movie(id: Int!): Movie
+  getMovies: [Movie]!
+  getMovie(id: Int!): Movie
 }
 
 type Mutation {
-  movie(name: String!, score: Int!): Movie!
+  createMovie(name: String!, score: Int!): Movie!
 }
