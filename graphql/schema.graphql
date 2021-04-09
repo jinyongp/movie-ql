@@ -7,12 +7,14 @@ type Movie {
   genres: [String]!
   summary: String!
   language: String!
-  background_image: String!
+  small_cover_image: String!
+  medium_cover_image: String!
+  large_cover_image: String!
   data_uploaded: String!
 }
 
 type Query {
-  getMovies(limit: Int, minimumRating: Float): [Movie]!
-  getMovie(movie_id: Int!): Movie
-  suggestMovies(movie_id: Int!): [Movie]!
+  movies(limit: Int, rating: Float): [Movie]!
+  movie(id: Int!): Movie
+  suggest(id: Int!): [Movie]!
 }
